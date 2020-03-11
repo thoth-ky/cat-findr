@@ -4,9 +4,8 @@ import { Link } from 'react-router-dom';
 
 function NavigationBar () {
   return (
-    <div>
-    
-      <Navbar className="bg-light" expand="lg" fixed="top">
+    <div >
+      <Navbar className="bg-light" expand="lg">
         <Navbar.Brand as={Link} to="/">Cat Findr</Navbar.Brand>
         <Nav className="mr-auto">
           <Nav.Link as={Link} to="/home">Home</Nav.Link>
