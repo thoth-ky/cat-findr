@@ -3,10 +3,10 @@ import { BrowserRouter } from 'react-router-dom';
 import { Switch, Route } from 'react-router-dom';
 
 // Local Imports
-import { SearchComponent } from './components/Search';
-import { FavsComponent } from './components/Favs';
-import { NavigationBar } from './components/NavBar';
-import { HomeComponent } from './components/Home'
+import { SearchComponent } from './components/SearchComponent';
+import { FavsComponent } from './components/FavsComponent';
+import { NavigationBar } from './components/NavBarComponent';
+import { HomeComponent } from './components/HomeComponent'
 
 import './App.css';
 
