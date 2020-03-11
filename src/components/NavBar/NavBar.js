@@ -1,16 +1,20 @@
 import React from 'react';
 import { Navbar, Nav } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 function NavigationBar () {
   return (
-    <Navbar className="bg-light" expand="lg" fixed="top">
-      <Navbar.Brand href="#home">Cat Findr</Navbar.Brand>
-      <Nav className="mr-auto">
-        <Nav.Link href="#home">Home</Nav.Link>
-        <Nav.Link href="#favs">Favs</Nav.Link>
-        <Nav.Link href="#search">Search</Nav.Link>
-    </Nav>
-    </Navbar>
+    <div>
+    
+      <Navbar className="bg-light" expand="lg" fixed="top">
+        <Navbar.Brand as={Link} to="/">Cat Findr</Navbar.Brand>
+        <Nav className="mr-auto">
+          <Nav.Link as={Link} to="/home">Home</Nav.Link>
+          <Nav.Link as={Link} to="/favs">Favs</Nav.Link>
+          <Nav.Link as={Link} to="/search">Search</Nav.Link>
+        </Nav>
+      </Navbar>
+    </div>
   )
 }
 
