@@ -54,8 +54,8 @@ function CatComponent({image={}, display={}}){
     )
   }
   return (
-    <Card  style={{width: '40rem'}} key={id} className="text-center">
-      <Card.Img variant="top" width='40rem'  height='400px' src={url}/>
+    <Card  style={{width: '60rem'}} key={id} className="text-center">
+      <Card.Img variant="top" height="500px" src={url} style={{objectFit: "contain"}}/>
       <Card.Body>
         <Card.Text as='div'>
           <b>Breed</b> : {breedName}
