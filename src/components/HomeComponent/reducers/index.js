@@ -1,0 +1,1 @@
+export { catsReducer } from './catsReducer'
