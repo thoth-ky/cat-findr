@@ -6,7 +6,19 @@ function NavigationBar () {
   return (
     <div >
       <Navbar className="bg-light" expand="lg">
-        <Navbar.Brand as={Link} to="/">Cat Findr</Navbar.Brand>
+        <Navbar.Brand
+          as={Link}
+          to="/"
+        >
+          <img
+            alt=""
+            src="public/cat.png"
+            width="30"
+            height="30"
+            className="d-inline-block align-top"
+          />
+          SHARWIWI
+        </Navbar.Brand>
         <Nav className="mr-auto">
           <Nav.Link as={Link} to="/home">Home</Nav.Link>
           <Nav.Link as={Link} to="/favs">Favs</Nav.Link>

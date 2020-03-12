@@ -2,10 +2,8 @@
 const catsReducer = (state, action) => {
   switch (action.type) {
     case 'ADD_NEW_CATS':
-      return {
-        ...state,
-        data: action.payload
-      };
+      return [...action.payload]
+      
       
     default:
       return state;

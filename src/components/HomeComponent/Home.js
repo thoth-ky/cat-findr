@@ -6,18 +6,13 @@ import {ButtonComponent} from '../shared/Button';
 
 function HomeComponent () {
   const {
-    allCatsData,
+    currentImage,
     nextPhoto,
     recordYes,
   } = CatsCustomHook();
   
-  const image = allCatsData && allCatsData[0];
   const display =  { expand:true };
   
-
-  useEffect(() => {
-  }, [allCatsData]);
-
   return (
     <div
       style={
@@ -31,7 +26,7 @@ function HomeComponent () {
       }
       className="catWindow"
     >
-      <CatComponent image={image} display={display} />
+      <CatComponent image={currentImage} display={display} />
       <div style={{ justifyContent: 'space-between'}}>
         <ButtonComponent message="Yap" buttonType="success" size="lg" onClickEvent={recordYes}/>
         <ButtonComponent message="Nop" buttonType="danger" size="lg" onClickEvent={nextPhoto} />

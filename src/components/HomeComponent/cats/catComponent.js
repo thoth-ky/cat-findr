@@ -2,8 +2,6 @@ import React, {useEffect} from 'react';
 import Card from 'react-bootstrap/Card'
 
 function CatComponent({image={}, display={}}){
-  // console.log({props})
-  // const { image={}, display={}} = props.props;
   const {
     id,
     width,
@@ -16,7 +14,6 @@ function CatComponent({image={}, display={}}){
   const { id: breedID, name: breedName, description, origin, life_span, } = {} || breeds && breeds[0]
   const { expand = false } = display;
 
-  console.log({breeds})
   
   return (
     <Card  style={{width: '40rem'}} key={id} className="text-center">
