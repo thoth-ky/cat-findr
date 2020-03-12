@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 function NavigationBar () {
   return (
     <div >
-      <Navbar className="bg-light" expand="lg">
+      <Navbar className="bg-light" expand="lg" fixed="sticky">
         <Navbar.Brand
           as={Link}
           to="/"

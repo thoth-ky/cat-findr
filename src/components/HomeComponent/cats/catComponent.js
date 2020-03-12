@@ -6,8 +6,6 @@ import isEmpty from 'is-empty';
 function CatComponent({image={}, display={}}){
   const {
     id,
-    width,
-    height,
     url,
     breeds=[],
   } = image;

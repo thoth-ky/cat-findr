@@ -11,7 +11,7 @@ function HomeComponent () {
     recordYes,
   } = CatsCustomHook();
   
-  const display =  { expand:true };
+  const display =  { expand: false };
   
   return (
     <div
@@ -27,10 +27,11 @@ function HomeComponent () {
       className="catWindow"
     >
       <CatComponent image={currentImage} display={display} />
+      { !display.expand && (
       <div style={{ justifyContent: 'space-between'}}>
         <ButtonComponent message="Yap" buttonType="success" size="lg" onClickEvent={recordYes}/>
         <ButtonComponent message="Nop" buttonType="danger" size="lg" onClickEvent={nextPhoto} />
-      </div>
+      </div>)}
   
     </div>
   )
