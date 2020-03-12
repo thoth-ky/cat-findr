@@ -6,7 +6,7 @@ import { Switch, Route } from 'react-router-dom';
 import { SearchComponent } from './components/SearchComponent';
 import { FavsComponent } from './components/FavsComponent';
 import { NavigationBar } from './components/NavBarComponent';
-import { HomeComponent } from './components/HomeComponent'
+import { HomeComponent } from './components/HomeComponent';
 
 import './App.css';
 
