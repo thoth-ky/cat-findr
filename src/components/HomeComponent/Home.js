@@ -7,8 +7,7 @@ import {ButtonComponent} from '../shared/Button';
 function HomeComponent () {
   const {
     currentImage,
-    nextPhoto,
-    recordYes,
+    recordVote,
   } = CatsCustomHook();
   
   const display =  { expand: false };
@@ -29,8 +28,8 @@ function HomeComponent () {
       <CatComponent image={currentImage} display={display} />
       { !display.expand && (
       <div style={{ justifyContent: 'space-between'}}>
-        <ButtonComponent message="Yap" buttonType="success" size="lg" onClickEvent={recordYes}/>
-        <ButtonComponent message="Nop" buttonType="danger" size="lg" onClickEvent={nextPhoto} />
+        <ButtonComponent message="Yap" buttonType="success" size="lg" onClickEvent={recordVote} name="like"/>
+        <ButtonComponent message="Nop" buttonType="danger" size="lg" onClickEvent={recordVote} name="dislike"/>
       </div>)}
   
     </div>

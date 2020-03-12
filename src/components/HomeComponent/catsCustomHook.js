@@ -34,8 +34,21 @@ const  CatsCustomHook = () => {
     }
   }
 
-  const recordYes =() => {
-    console.log('Voted Yes')
+  const recordVote = (event) => {
+    const action = event.target.name;
+    let VOTE_KEY;
+    if(action === 'like'){
+      VOTE_KEY = 'LIKES'
+    } else if( action==='dislike'){
+      VOTE_KEY = 'DISLIKES'
+    }
+
+    const { id } = currentImage;
+    
+    const voteString = `${localStorage.getItem(VOTE_KEY)}, ${id}`;
+
+    console.log({VOTE_KEY}, voteString.length)
+    localStorage.setItem(VOTE_KEY, voteString)
     nextPhoto()
   }
 
@@ -49,8 +62,7 @@ const  CatsCustomHook = () => {
     allCatsData,
     currentImage,
     setCurrentImage,
-    nextPhoto,
-    recordYes,
+    recordVote,
     currentImageIndex,
   }
 }
