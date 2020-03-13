@@ -16,7 +16,7 @@ function getCategories(dispatch) {
 
 function searchImages(dispatch, params = {}) {
   const actionData = {
-    type: 'SEARCH_IMAGE_RESULTS',
+    type: 'STORE_SEARCH_IMAGE_RESULTS',
   };
   getFromApi('/images', dispatch, actionData, params);
 }
