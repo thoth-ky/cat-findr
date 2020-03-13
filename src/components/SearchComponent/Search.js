@@ -5,7 +5,7 @@ function SearchComponent() {
     <div>
       Search
     </div>
-  )
+  );
 }
 
 export { SearchComponent };
