@@ -1,5 +1,5 @@
-const initialState =  {
- cats: [],
+const initialState = {
+  cats: [],
 };
 
 export { initialState };

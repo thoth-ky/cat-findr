@@ -1,1 +1,1 @@
-export { FavsComponent } from './Favs'
+export { FavsComponent } from './Favs';

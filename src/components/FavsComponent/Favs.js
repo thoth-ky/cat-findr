@@ -5,7 +5,7 @@ function FavsComponent() {
     <div>
       Favs
     </div>
-  )
+  );
 }
 
 export { FavsComponent };

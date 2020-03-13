@@ -1,11 +1,12 @@
 const stringifyParams = (params) => {
-  let string = ''
-  for (const [key, value] of Object.entries(params)) {
-   string = string + `${key}=${value}&`
-  }
-  return string
-}
+  let string = '';
+  Object.entries(params).forEach((elem) => {
+    const [key, val] = elem;
+    string = `${string}${key}=${val}&`;
+  });
+  return string;
+};
 
 export {
   stringifyParams,
-}
+};

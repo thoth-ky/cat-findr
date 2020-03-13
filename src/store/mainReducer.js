@@ -1,9 +1,9 @@
-import { catsReducer } from '../components/HomeComponent/reducers'
+import { catsReducer } from '../components/HomeComponent/reducers';
 
-const mainReducer = ({ cats}, action) => ({
+const mainReducer = ({ cats }, action) => ({
   cats: catsReducer(cats, action),
 });
 
 export {
-  mainReducer
-}
+  mainReducer,
+};
