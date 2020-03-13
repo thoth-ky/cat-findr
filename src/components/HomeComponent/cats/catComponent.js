@@ -2,6 +2,9 @@ import React, {useEffect} from 'react';
 import Card from 'react-bootstrap/Card'
 import ListGroup from 'react-bootstrap/ListGroup'
 import isEmpty from 'is-empty';
+import Img from 'react-image';
+
+import { Loader } from '../../shared/Loader'
 
 function CatComponent({image={}, display={}}){
   const {
@@ -20,9 +23,7 @@ function CatComponent({image={}, display={}}){
 
   if (isEmpty(image)){
     return (
-      <Card.Text>
-        Loading Image...
-      </Card.Text>
+      <Loader/>
     )
   }
 
@@ -53,9 +54,10 @@ function CatComponent({image={}, display={}}){
       </Card>
     )
   }
+
   return (
     <Card  style={{width: '60rem'}} key={id} className="text-center">
-      <Card.Img variant="top" height="500px" src={url} style={{objectFit: "contain"}}/>
+      <Card.Img  as={Img} variant="top" height="500px" src={url} style={{objectFit: "contain"}} loader={<Loader/>}/>
       <Card.Body>
         <Card.Text as='div'>
           <b>Breed</b> : {breedName}

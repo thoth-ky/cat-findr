@@ -10,7 +10,6 @@ const  CatsCustomHook = () => {
   const [fetchBatch, setFetchBacth] = useState(false)
 
   const { cats: allCatsData = [] } = state;
-  console.log({allCatsData})
 
   useEffect(() => {
     const params = {

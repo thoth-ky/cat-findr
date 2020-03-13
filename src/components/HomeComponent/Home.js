@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import CatsCustomHook from './catsCustomHook'
 import { CatComponent } from './cats/catComponent';
 import {ButtonComponent} from '../shared/Button';
