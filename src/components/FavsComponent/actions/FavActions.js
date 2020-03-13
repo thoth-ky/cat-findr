@@ -4,7 +4,7 @@ const getFavCatAction = (dispatch, favID, params = {}) => {
   const actionData = {
     type: 'ADD_FAV_CATS',
   };
-  getFromApi(`images/${favID}`, dispatch, actionData, params);
+  getFromApi(`/images/${favID}`, dispatch, actionData, params);
 };
 
 export {
