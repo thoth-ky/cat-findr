@@ -1,0 +1,1 @@
+export { favCatReducer } from './favCatReducer';
