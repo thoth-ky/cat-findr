@@ -2,13 +2,14 @@ import React from 'react';
 import { Navbar, Nav } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
-function NavigationBar () {
+function NavigationBar() {
   return (
-    <div >
+    <div>
       <Navbar className="bg-light" expand="lg" fixed="sticky">
         <Navbar.Brand
           as={Link}
           to="/"
+          style={{ fontSize: 'larger' }}
         >
           <img
             alt=""
@@ -26,7 +27,7 @@ function NavigationBar () {
         </Nav>
       </Navbar>
     </div>
-  )
+  );
 }
 
 export { NavigationBar };
