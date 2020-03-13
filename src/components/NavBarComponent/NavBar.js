@@ -4,8 +4,14 @@ import { Link } from 'react-router-dom';
 
 function NavigationBar() {
   return (
-    <div>
-      <Navbar className="bg-light" expand="lg" fixed="sticky">
+    <div style={{ justifyContent: 'space-evenly', width: '100%' }}>
+      <Navbar
+        className="bg-dark"
+        expand="sm"
+        fixed="sticky"
+        variant="dark"
+        style={{ display: 'grid', justifyContent: 'center', width: '100%' }}
+      >
         <Navbar.Brand
           as={Link}
           to="/"

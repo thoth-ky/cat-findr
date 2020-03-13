@@ -1,8 +1,7 @@
 import React from 'react';
 import CatsCustomHook from './catsCustomHook';
-import { CatComponent } from './cats/catComponent';
-import { ButtonComponent } from '../shared/Button';
-
+import { ButtonComponent, CatComponent } from '../shared';
+import { Container, ButtonContainer } from '../shared/StyledComponents';
 
 function HomeComponent() {
   const {
@@ -13,27 +12,18 @@ function HomeComponent() {
   const display = { expand: false };
 
   return (
-    <div
-      style={
-        {
-          display: 'flex',
-          alignItems: 'center',
-          height: '100%',
-          flexDirection: 'column',
-          justifyContent: 'space-evenly',
-        }
-      }
+    <Container
       className="catWindow"
     >
       <CatComponent image={currentImage} display={display} />
       { !display.expand && (
-      <div style={{ justifyContent: 'space-between' }}>
+      <ButtonContainer>
         <ButtonComponent message="Yap" buttonType="success" size="lg" onClickEvent={recordVote} name="like" />
         <ButtonComponent message="Nop" buttonType="danger" size="lg" onClickEvent={recordVote} name="dislike" />
-      </div>
+      </ButtonContainer>
       )}
 
-    </div>
+    </Container>
   );
 }
 

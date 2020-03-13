@@ -27,5 +27,5 @@ ButtonComponent.propTypes = {
   name: PropTypes.string.isRequired,
 };
 export {
-  ButtonComponent,
+  ButtonComponent as default,
 };
