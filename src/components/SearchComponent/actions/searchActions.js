@@ -7,22 +7,22 @@ function getBreedsAction(dispatch) {
   getFromApi('/breeds', dispatch, actionData);
 }
 
-function getCategories(dispatch) {
+function getCategoriesAction(dispatch) {
   const actionData = {
     type: 'ADD_CATEGORIES',
   };
   getFromApi('/categories', dispatch, actionData);
 }
 
-function searchImages(dispatch, params = {}) {
+function searchImagesAction(dispatch, params = {}) {
   const actionData = {
     type: 'STORE_SEARCH_IMAGE_RESULTS',
   };
-  getFromApi('/images', dispatch, actionData, params);
+  getFromApi('/images/search', dispatch, actionData, params);
 }
 
 export {
   getBreedsAction,
-  getCategories,
-  searchImages,
+  getCategoriesAction,
+  searchImagesAction,
 };

@@ -10,14 +10,14 @@ function FavsComponent() {
     navigateFavs,
   } = FavCatHook();
 
-  const display = { expand: false };
+  const display = { expand: false, body: true };
   if (isEmpty(favCat)) {
     return (<Loader msg="No favorites yet, swipe first" />);
   }
 
   return (
     <Container>
-      <CatComponent image={favCat} display={display} />
+      <CatComponent image={favCat} display={display} width="60rem" />
       { !display.expand && (
       <ButtonContainer>
         <ButtonComponent message="PREV" buttonType="primary" size="lg" onClickEvent={navigateFavs} name="prev" />

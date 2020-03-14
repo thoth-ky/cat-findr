@@ -9,13 +9,13 @@ function HomeComponent() {
     recordVote,
   } = CatsCustomHook();
 
-  const display = { expand: false };
+  const display = { expand: false, body: true };
 
   return (
     <Container
       className="catWindow"
     >
-      <CatComponent image={currentImage} display={display} />
+      <CatComponent image={currentImage} display={display} width="60rem" />
       { !display.expand && (
       <ButtonContainer>
         <ButtonComponent message="Yap" buttonType="success" size="lg" onClickEvent={recordVote} name="like" />

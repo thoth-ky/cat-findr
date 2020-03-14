@@ -7,7 +7,7 @@ import ExtraDetails from './extras';
 import Loader from '../Loader';
 
 
-function CatComponent({ image, display }) {
+function CatComponent({ image, display, width }) {
   const {
     id,
     url,
@@ -20,7 +20,7 @@ function CatComponent({ image, display }) {
   } = (breeds && breeds[0]) || {};
 
 
-  const { expand = false } = display;
+  const { expand = false, body: displayBody } = display;
 
   if (isEmpty(image)) {
     return (
@@ -29,8 +29,9 @@ function CatComponent({ image, display }) {
   }
 
   return (
-    <Card style={{ width: '60rem' }} key={id} className="text-center">
+    <Card style={{ width }} key={id} className="text-center">
       <Card.Img as={Img} variant="top" height="500px" src={url} style={{ objectFit: 'contain' }} loader={<Loader />} />
+      {displayBody && (
       <Card.Body>
         <Card.Text as="div">
           <b>Breed</b>
@@ -45,6 +46,7 @@ function CatComponent({ image, display }) {
           {!isEmpty(breeds) && expand && <ExtraDetails breed={breeds[0]} />}
         </Card.Text>
       </Card.Body>
+      )}
     </Card>
   );
 }
@@ -57,7 +59,9 @@ CatComponent.propTypes = {
   }).isRequired,
   display: PropTypes.shape({
     expand: PropTypes.bool,
+    body: PropTypes.bool,
   }).isRequired,
+  width: PropTypes.string.isRequired,
 };
 
 export { CatComponent as default };
