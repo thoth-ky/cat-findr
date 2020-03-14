@@ -1,10 +1,17 @@
 import React from 'react';
+import {
+  ImagesDashboard,
+  FilterComponent,
+} from './partials';
+import { Container } from '../shared/StyledComponents';
+
 
 function SearchComponent() {
   return (
-    <div>
-      Search
-    </div>
+    <Container>
+      <FilterComponent />
+      <ImagesDashboard />
+    </Container>
   );
 }
 

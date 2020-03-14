@@ -22,7 +22,7 @@ function FavCatHook() {
           favs.push(item.trim());
         }
       });
-      setFavorites(favs);
+      setFavorites([...new Set(favs)]);
     }
   }, []);
 

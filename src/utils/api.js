@@ -5,7 +5,7 @@ const updateState = (dispatch, action) => {
   dispatch(action);
 };
 
-const getFromApi = (path, dispatch, actionData, params) => {
+const getFromApi = (path, dispatch, actionData, params = {}) => {
   const url = `${config.apiUrl}${path}?${stringifyParams(params)}`;
 
   fetch(url, {
