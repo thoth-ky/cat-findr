@@ -47,7 +47,7 @@ You can now access it via `localhost:3000`
 3. Run the Image and expose `PORT 3000`
 
   ```bash
-    $ docker run -p 3000:80 sharwiwi:latest
+    $ docker run -p 3000:3000 sharwiwi:latest
   ```
 You can now access it via `localhost:3000`
 
