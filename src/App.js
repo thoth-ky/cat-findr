@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { ToastProvider } from 'react-toast-notifications';
 
 
 // Local Imports
@@ -13,19 +14,21 @@ import './App.css';
 function App() {
   return (
     <BrowserRouter>
-      <div className="App">
-        <header className="App-header">
-          <NavigationBar />
-        </header>
-        <div className="App-Body">
-          <Switch>
-            <Route exact path="/" component={HomeComponent} />
-            <Route path="/home" component={HomeComponent} />
-            <Route path="/favs" component={FavsComponent} />
-            <Route path="/search" component={SearchComponent} />
-          </Switch>
+      <ToastProvider placement="top-center">
+        <div className="App">
+          <header className="App-header">
+            <NavigationBar />
+          </header>
+          <div className="App-Body">
+            <Switch>
+              <Route exact path="/" component={HomeComponent} />
+              <Route path="/home" component={HomeComponent} />
+              <Route path="/favs" component={FavsComponent} />
+              <Route path="/search" component={SearchComponent} />
+            </Switch>
+          </div>
         </div>
-      </div>
+      </ToastProvider>
     </BrowserRouter>
   );
 }

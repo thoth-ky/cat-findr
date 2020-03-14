@@ -42,7 +42,7 @@ function FiltersComponent() {
 
 
   return (
-    <Form className="filters" style={{ width: '100%' }}>
+    <Form className="filters" style={{ width: '100%', height: '150px' }}>
       <Form.Row>
         <Col>
           <SelectComponent options={orderOptions} onChange={updateOrder} name="Order" />

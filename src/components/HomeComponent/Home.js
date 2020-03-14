@@ -15,7 +15,7 @@ function HomeComponent() {
     <Container
       className="catWindow"
     >
-      <CatComponent image={currentImage} display={display} width="60rem" />
+      <CatComponent image={currentImage} display={display} width="60rem" imgHeight="500px" />
       { !display.expand && (
       <ButtonContainer>
         <ButtonComponent message="Yap" buttonType="success" size="lg" onClickEvent={recordVote} name="like" />

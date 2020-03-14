@@ -7,7 +7,9 @@ import ExtraDetails from './extras';
 import Loader from '../Loader';
 
 
-function CatComponent({ image, display, width }) {
+function CatComponent({
+  image, display, width, imgHeight,
+}) {
   const {
     id,
     url,
@@ -30,7 +32,7 @@ function CatComponent({ image, display, width }) {
 
   return (
     <Card style={{ width }} key={id} className="text-center">
-      <Card.Img as={Img} variant="top" height="500px" src={url} style={{ objectFit: 'contain' }} loader={<Loader />} />
+      <Card.Img as={Img} variant="top" height={imgHeight} src={url} style={{ objectFit: 'contain' }} loader={<Loader />} />
       {displayBody && (
       <Card.Body>
         <Card.Text as="div">
@@ -62,6 +64,11 @@ CatComponent.propTypes = {
     body: PropTypes.bool,
   }).isRequired,
   width: PropTypes.string.isRequired,
+  imgHeight: PropTypes.string,
+};
+
+CatComponent.defaultProps = {
+  imgHeight: '500px',
 };
 
 export { CatComponent as default };

@@ -2,7 +2,7 @@ import React from 'react';
 import isEmpty from 'is-empty';
 import { FavCatHook } from './FavsCustomHook';
 import { CatComponent, Loader, ButtonComponent } from '../shared';
-import { Container, ButtonContainer } from '../shared/StyledComponents';
+import { Container } from '../shared/StyledComponents';
 
 function FavsComponent() {
   const {
@@ -16,14 +16,10 @@ function FavsComponent() {
   }
 
   return (
-    <Container>
-      <CatComponent image={favCat} display={display} width="60rem" />
-      { !display.expand && (
-      <ButtonContainer>
-        <ButtonComponent message="PREV" buttonType="primary" size="lg" onClickEvent={navigateFavs} name="prev" />
-        <ButtonComponent message="NEXT" buttonType="primary" size="lg" onClickEvent={navigateFavs} name="next" />
-      </ButtonContainer>
-      )}
+    <Container style={{ flexDirection: 'row' }}>
+      <ButtonComponent message="PREV" buttonType="primary" size="lg" onClickEvent={navigateFavs} name="prev" />
+      <CatComponent image={favCat} display={display} width="80rem" imgHeight="600px" />
+      <ButtonComponent message="NEXT" buttonType="primary" size="lg" onClickEvent={navigateFavs} name="next" />
     </Container>
   );
 }

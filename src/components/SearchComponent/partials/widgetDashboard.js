@@ -1,7 +1,7 @@
 import React from 'react';
-import Button from 'react-bootstrap/Button';
+import isEmpty from 'is-empty';
 import WidgetCustomHook from './widgetCustomHook';
-import { ButtonComponent, CatComponent } from '../../shared';
+import { ButtonComponent, CatComponent, Loader } from '../../shared';
 
 function WidgetImagesDashboard() {
   const {
@@ -10,11 +10,17 @@ function WidgetImagesDashboard() {
     favoriteImage,
   } = WidgetCustomHook();
 
+  if (isEmpty(searchResults)) {
+    return (
+      <Loader msg="No Image Result for set filters" />
+    );
+  }
+
   return (
     <div
       className="dashboard"
       style={{
-        height: '600px',
+        height: '100%',
         width: '100%',
         overflow: 'scroll',
         display: 'flex',
@@ -26,12 +32,12 @@ function WidgetImagesDashboard() {
       {
         searchResults.map((image) => (
           <div style={{ padding: '1%' }} key={image.id}>
-            <CatComponent image={image} display={display} width="35rem" />
+            <CatComponent image={image} display={display} width="30rem" imgHeight="300px" />
             <ButtonComponent
               message="Fav It"
               buttonType="success"
               size="lg"
-              onClickEvent={(e) => favoriteImage(image.id)}
+              onClickEvent={() => favoriteImage(image.id)}
               name="fav-it"
               id={image.id}
               style={{ width: '100%' }}

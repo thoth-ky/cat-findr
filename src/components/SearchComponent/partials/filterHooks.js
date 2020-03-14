@@ -46,7 +46,7 @@ function FilterCustomHook() {
       order,
       mime_types: (type === 'Static') ? 'jpg,png' : 'gif',
       size: 'med',
-      limit: 5,
+      limit: 100,
     };
 
     searchImagesAction(dispatch, params);
