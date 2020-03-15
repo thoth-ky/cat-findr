@@ -68,6 +68,7 @@ function FilterCustomHook() {
   useEffect(() => {
     searchImages();
     setFilterOptions();
+    // eslint-disable-next-line
   }, [order, type, category, breed, breeds, categories, dispatch]);
 
   return {
