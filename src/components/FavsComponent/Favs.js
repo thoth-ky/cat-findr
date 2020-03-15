@@ -16,11 +16,17 @@ function FavsComponent() {
   }
 
   return (
-    <Container style={{ flexDirection: 'row' }}>
-      <ButtonComponent message="PREV" buttonType="primary" size="lg" onClickEvent={navigateFavs} name="prev" />
-      <CatComponent image={favCat} display={display} width="80rem" imgHeight="600px" />
-      <ButtonComponent message="NEXT" buttonType="primary" size="lg" onClickEvent={navigateFavs} name="next" />
-    </Container>
+    <div>
+      <div style={{ fontSize: '20px', fontFamily: 'Heebo' }}>
+        <b>Here are your favorite Cat pics. Use the buttons to navigate!</b>
+      </div>
+
+      <Container style={{ flexDirection: 'row' }}>
+        <ButtonComponent message="PREVIOUS" buttonType="primary" size="lg" onClickEvent={navigateFavs} name="prev" />
+        <CatComponent image={favCat} display={display} width="70rem" imgHeight="600px" />
+        <ButtonComponent message="NEXT" buttonType="primary" size="lg" onClickEvent={navigateFavs} name="next" />
+      </Container>
+    </div>
   );
 }
 

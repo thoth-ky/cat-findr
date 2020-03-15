@@ -34,7 +34,7 @@ function WidgetImagesDashboard() {
           <div style={{ padding: '1%' }} key={image.id}>
             <CatComponent image={image} display={display} width="30rem" imgHeight="300px" />
             <ButtonComponent
-              message="Fav It"
+              message="Fav-It"
               buttonType="success"
               size="lg"
               onClickEvent={() => favoriteImage(image.id)}

@@ -15,6 +15,17 @@ function HomeComponent() {
     <Container
       className="catWindow"
     >
+      <div style={{ fontSize: '20px', fontFamily: 'Heebo' }}>
+        You Like it? Click
+        {' '}
+        <b style={{ color: 'green' }}>Yap</b>
+        {' '}
+        to like, or
+        {' '}
+        <b style={{ color: 'red' }}>Nop</b>
+        {' '}
+        to dislike.
+      </div>
       <CatComponent image={currentImage} display={display} width="60rem" imgHeight="500px" />
       { !display.expand && (
       <ButtonContainer>

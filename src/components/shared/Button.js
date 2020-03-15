@@ -8,7 +8,7 @@ function ButtonComponent({
   return (
     <Button
       size={size}
-      style={{ margin: '10px' }}
+      style={{ margin: '10px', width: '200px' }}
       variant={buttonType}
       onClick={onClickEvent}
       name={name}
