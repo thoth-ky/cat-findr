@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/sharwiwi/static/css/main.71d237bb.chunk.css",
+    "main.js": "/sharwiwi/static/js/main.57532537.chunk.js",
+    "main.js.map": "/sharwiwi/static/js/main.57532537.chunk.js.map",
+    "runtime-main.js": "/sharwiwi/static/js/runtime-main.9508d704.js",
+    "runtime-main.js.map": "/sharwiwi/static/js/runtime-main.9508d704.js.map",
+    "static/css/2.de424728.chunk.css": "/sharwiwi/static/css/2.de424728.chunk.css",
+    "static/js/2.631e7281.chunk.js": "/sharwiwi/static/js/2.631e7281.chunk.js",
+    "static/js/2.631e7281.chunk.js.map": "/sharwiwi/static/js/2.631e7281.chunk.js.map",
+    "index.html": "/sharwiwi/index.html",
+    "precache-manifest.5c6862165d5d41f94c2c42da1175da0e.js": "/sharwiwi/precache-manifest.5c6862165d5d41f94c2c42da1175da0e.js",
+    "service-worker.js": "/sharwiwi/service-worker.js",
+    "static/css/2.de424728.chunk.css.map": "/sharwiwi/static/css/2.de424728.chunk.css.map",
+    "static/css/main.71d237bb.chunk.css.map": "/sharwiwi/static/css/main.71d237bb.chunk.css.map",
+    "static/js/2.631e7281.chunk.js.LICENSE.txt": "/sharwiwi/static/js/2.631e7281.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9508d704.js",
+    "static/css/2.de424728.chunk.css",
+    "static/js/2.631e7281.chunk.js",
+    "static/css/main.71d237bb.chunk.css",
+    "static/js/main.57532537.chunk.js"
+  ]
+}
